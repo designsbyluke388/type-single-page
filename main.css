@@ -1,5 +1,5 @@
 @font-face {
-    src: url("fonts/STIXTwoText-Regular.otf") format("woff2");
+    src: url("fonts/STIXTwoText-Regular.otf") format("otf");
     font-family: 'STIX Two Text';
     font-style: normal, medium, semibold, bold, italic, medium italic, semibol idtalic, bold italic;
     font-weight: normal, medium, semibold, bold, italic, medium italic, semibol idtalic, bold italic;
