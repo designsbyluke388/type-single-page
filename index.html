@@ -26,37 +26,44 @@
           </header>
           <!-- Hero section -->
           <section class="hero">
-            <section class="hero">
+                <img src="Asset 3.png" alt="Asset">
                 <h3 class="weight">STIX</h3>
-          </section>
-          <!-- Type history -->
-<section class="page-wrapper">
-          <section id="history"> 
-            <h2>History of the font</h2>
-                <p>The first versions of the STIX fonts were a clone of the Times New Roman Typefaces, produced for STI Pub by MicroPress. However, in 2014, Tiro Typeworks commissioned it to revise the font and repackage the typefaces, resulting in the distinct STIX Two types.</p>
-                <p>Description: The STIX Two types bridge the gap between sophisticated typographic tools for natural language typesetting and the specialized needs of mathematical and scientific publishing. The first versions of the STIX fonts were a clone of the Times New Roman Typefaces, produced for STI Pub by MicroPress. However, in 2014, Tiro Typeworks commissioned it to revise the font and repackage the typefaces, resulting in the distinct STIX Two types.</p>
-                <p>In redesigning the types, Ross Mills replaced the Times New Roman clone with a new design that references the original 10pt metal type size of Times, resulting in a more rugged form better suited to a range of print and digital media. The STIX redesigns seem to have a softer stroke on the typefaces and more variables and characters. </p>
-                <h2>Supported Languages include:</h2>
-                <p>The core character set of all the fonts covers pan-European Latin, Cyrillic, and Greek language support, IPA phonetic transcription characters, plus common punctuation and symbols.</p>
-          </section>
+            </section>
+               <!-- RIGHT COLUMN -->
+    <section class="content" id="history">
+        <h6>History of the font</h6>
+        <p>The first versions of the STIX fonts were a clone of the Times New Roman typefaces, produced for STI Pub by MicroPress. In 2014, Tiro Typeworks commissioned a revision and repackaging of the family, resulting in the distinct STIX Two typefaces.</p>
+        <p>
+            Description: The STIX Two types bridge the gap between sophisticated typographic tools for natural language typesetting and the specialized needs of mathematical and scientific publishing. The first versions of the STIX fonts were a clone of the Times New Roman Typefaces, produced for STI Pub by MicroPress. However, in 2014, Tiro Typeworks commissioned it to revise the font and repackage the typefaces, resulting in the distinct STIX Two types.</p>
+        <p>
+            In redesigning the types, Ross Mills replaced the Times New Roman clone with a new design that references the original 10pt metal type size of Times, resulting in a more rugged form better suited to a range of print and digital media. The STIX redesigns seem to have a softer stroke on the typefaces and more variables and characters.
+        </p>
 
-          <section id="variations">
+        <h6>Supported Languages include:</h6>
+        <p>The core character set of all the fonts covers pan-European Latin, Cyrillic, and Greek language support, IPA phonetic transcription characters, plus common punctuation and symbols.
+        </p>
+    </section>
+    <!-- LEFT COLUMN -->
+    <section class="sidebar" id="variations">
+        <section id="variations">
             <h2>Variable Font Axes</h2>
-            <p>Forma has three variable axes</p>
+            <body-text>Forma has three variable axes</body-text>
             <h5 class="weight">Weight</h5>
             <h5 class="size">Optical Size</h5>
             <h5 class="width">Width</h5>
           </section>
+            </div>
+        </div>
 
-          <section id="alphabet">
-            <h1>Full character Set</h1>
-            <p>AaBcCcDdEeFfGgHhIiJjKk</p>
-               <p>LlMmNnOoPpQqRrSs</p>
-               <p>TtUuVvWxYyZz</p>
-            <p>1234567890!@#$%^&*()</p>
-          </section>
-              <a href="https://www.tiro.com/fonts/stix-two" class="outline" target="_blank"> Font Download </a>
+        <h2 id="alphabet">Full Character Set</h2>
+        <p class="alphabet">
+            Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk<br>
+            Ll Mm Nn Oo Pp Qq Rr Ss Tt<br>
+            Uu Vv Ww Xx Yy Zz<br>
+            0123456789 {!@#$%^&*}
+        </p>
 
+         <a href="https://www.tiro.com/fonts/stix-two" class="outline" target="_blank"> Font Download </a>
 
           </div>
           </section>
@@ -64,12 +71,28 @@
           <footer>
             <section id="contact"> 
             <p></p>
-            <h1>Designed by Luke Perier</h1>
+            <img src="3x/Asset 7@3x.png" alt="Asset">
             <p>AXD 254-01: Web Typography</p>
             <p>lukeperier@comcast.net</p>
                <a href="https://lukeperier.wixsite.com/my-site-2" class="outline" target="_blank">Portfolio Site</a>
 
           </footer>
 
+    <script>
+        const heroText = document.querySelector('.hero h3');
+        const hero = document.querySelector('.hero');
+
+        window.addEventListener('scroll', () => {
+            const heroRect = hero.getBoundingClientRect();
+            const heroCenter = window.innerHeight / 2;
+            const distance = Math.abs(heroCenter - heroRect.top);
+            const maxDistance = window.innerHeight;
+            
+            // Calculate zoom level (0.2 to 2.5) for more dramatic effect
+            const zoom = 2.5 - (distance / maxDistance) * 2.3;
+            
+            heroText.style.transform = `scale(${Math.max(0.2, zoom)})`;
+        });
+    </script>
 </body>
 </html>

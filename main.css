@@ -6,7 +6,7 @@
     }
     
     body{
-    background-color: #8a8252;
+    background-color: #000000;
     font-family: 'STIX Two Text', serif;
 }
 /* how the page wrapper will appear on mobile */
@@ -24,30 +24,53 @@
 
     /* make rows stretch */
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;   /* first row fills space */
+    grid-template-rows: auto auto auto;   /* first row fills space */
     
     min-height: 100vh;  /* makes wrapper full page height */
 
     grid-template-areas: 
-        "v h"
-        "a a";
+        "hist hist"
+        "var alt"
+        "button button";
+}
+
+.page-wrapper > .outline {
+    grid-area: button;
 }
 
 
 #history {
-    grid-area: h;
+    grid-area: hist;
     background-color: #fdf5ad;
     padding-inline: 1.5rem;
-    margin-block: 0;
+    margin-block: 2;
+    display: flex;
+    align-items: l;
+    justify-content: left;
+    text-align: left;
 }
 
 #variations{
-grid-area: v;
+    grid-area: var;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 #alphabet {
-grid-area: a;
-text-align: left;
+    grid-area: alt;
+    text-align: center;
+    color: #fdf5ad;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.alphabet {
+    color: #fdf5ad;
 }
 
 /* Outline button styles */
@@ -62,6 +85,7 @@ text-align: left;
     background-color: #000000;
     color: #fff;
 }
+
 /* CSS for the footer */
 footer{
     color: #fdf5ad;
@@ -78,15 +102,43 @@ h1{
 
 
 h2{
-    color: #000000;
+    color: #fdf5ad;
     font-variation-settings: "opsz" 16, "wght" 900, "slnt" 800;
 }
 
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero h3 {
+    position: relative;
+    z-index: 0;
+}
+
 h3{
+    color: #fdf5ad;
     font-weight:20; 
     text-align: center;
     font-size: 5em;
     animation: weightChange 7s infinite;
+}
+
+h4{
+    color: #000000;
+    font-size:20; 
+    text-align: align left;
 }
 
 @keyframes weightChange {
@@ -125,6 +177,22 @@ h5{
     margin:15px;
 }
 
+h6{
+    color: #000000;
+    font-size: 25px;
+}
+
+h7{
+    color: #fdf5ad;
+    font-size: 15px;
+}
+
+body-text{
+    color: #fdf5ad;
+    font-size: 20px;
+
+}
+
 /* variable font that changes on hover */
 .variable-font{
     font-weight:1 ;
@@ -150,4 +218,3 @@ h5{
     text-align: center;
     font-variation-settings: "wght" 120, "wdth" 0, "slnt" 100;
 }
-
