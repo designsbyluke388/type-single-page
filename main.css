@@ -222,7 +222,7 @@ body-text{
 .banner img {
   width: 100%;
   /* Bind animation to the image */
-  animation: slideIn 3s ease-out forwards; 
+  animation: slideIn 2s ease-out forwards; 
 }
 
 /* Define the animation steps */
